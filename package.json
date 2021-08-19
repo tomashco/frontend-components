@@ -1,0 +1,36 @@
+{
+  "name": "bit-workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tommaso Maioli <tommaso.maioli@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "babel-loader": "^8.2.2",
+    "@storybook/addon-a11y": "6.3.7",
+    "@storybook/addon-controls": "6.3.7",
+    "@storybook/addon-jest": "6.3.7",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/preset-scss": "1.0.3",
+    "css-loader": "3.4.2",
+    "jest": "27.0.6",
+    "node-sass": "6.0.1",
+    "prop-types": "15.7.2",
+    "reset-css": "5.0.1",
+    "sass": "1.36.0",
+    "sass-loader": "10.0.0",
+    "sass-resources-loader": "2.2.3",
+    "storybook-css-modules-preset": "^1.0.8",
+    "style-loader": "2.0.0"
+
+  },
+  "dependencies": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
