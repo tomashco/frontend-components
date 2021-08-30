@@ -9,9 +9,19 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const InDefaultState = Template.bind({});
+export const Primary = Template.bind({});
 
-InDefaultState.args = {
+Primary.args = {
   children: 'Click Me!',
   isLoading: false,
+  variant: 'primary',
+  className: 'foo asdf',
+};
+
+export const Secondary = Template.bind({});
+
+Secondary.args = {
+  children: 'Click Me!',
+  isLoading: false,
+  variant: 'secondary',
 };
