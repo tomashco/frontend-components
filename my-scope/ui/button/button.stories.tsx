@@ -1,5 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
+import Typography from '@bit/mui-org.material-ui.typography';
+
 import Button from './button';
 
 export default {
@@ -7,21 +9,25 @@ export default {
   component: Button,
 } as Meta;
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => 
+  <Button 
+    onClick={() => alert('on click')}
+    {...args}
+    children={<Typography variant="button" display="block" gutterBottom>Click me!</Typography>}
+    />;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
-  children: 'Click Me!',
+  // children: 'Click Me!',
   isLoading: false,
   variant: 'primary',
-  className: 'foo asdf',
 };
 
 export const Secondary = Template.bind({});
 
 Secondary.args = {
-  children: 'Click Me!',
+  // children: 'Click Me!',
   isLoading: false,
   variant: 'secondary',
 };

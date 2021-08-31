@@ -39,6 +39,8 @@
     "policy": {
       "dependencies": {
         "@babel/parser": "7.15.3",
+        "@bit/davidhu2000.react-spinners.clip-loader": "0.5.1",
+        "@bit/mui-org.material-ui.typography": "4.9.10",
         "@teambit/base-ui.elements.dots-loader": "1.0.3",
         "@types/react": "17.0.15",
         "chai": "4.3.4",

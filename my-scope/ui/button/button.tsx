@@ -3,8 +3,9 @@ import classNames from 'classnames';
 
 // //@ts-ignore
 // import Spinner from '@bit/bit.base-ui.ellipsis';
+import ClipLoader from '@bit/davidhu2000.react-spinners.clip-loader';
 
-import { DotsLoader } from '@teambit/base-ui.elements.dots-loader';
+// import { DotsLoader } from '@teambit/base-ui.elements.dots-loader';
 import styles from './button.module.scss';
 
 // const defaultSpinner = (
@@ -39,7 +40,7 @@ export default class Button extends Component<ButtonProps> {
   private unmounted = false;
 
   static defaultProps = {
-    loader: <DotsLoader />,
+    loader: <ClipLoader />,
     loading: false,
   };
 
@@ -79,8 +80,6 @@ export default class Button extends Component<ButtonProps> {
 
     const content = isLoading ? loader : children;
     const disabledByLoading = isLoading && !activeWhenLoading;
-
-    console.log(this.props)
 
     return (
 			<button
