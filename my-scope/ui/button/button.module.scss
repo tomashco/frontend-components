@@ -10,23 +10,26 @@ $t-gray-dark: rgb(148, 148, 148);
   cursor: pointer;
   font: inherit;
   border-radius: 1em;
-  padding: 0.5em 0.5em 0.1em 0.5em;
-  width: 100px;
+  padding: 0.5em;
+  // width: 100px;
   height: 50px;
 }
 
 [data-variant="primary"] {
   background-color: $t-red;
-  color: #FFFFFF;
+  color: #ffffff;
   box-shadow: 0 0 10px #ccc;
-  
-  &:hover {background-color: $t-red-dark}
 
+  &:hover {
+    background-color: $t-red-dark;
+  }
 }
 
 [data-variant="secondary"] {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 0 10px $t-gray-light, 0 0 0 2px $t-red;
-  
-  &:hover {box-shadow: 0 0 10px $t-gray-dark, 0 0 0 2px $t-red;}
+
+  &:hover {
+    box-shadow: 0 0 10px $t-gray-dark, 0 0 0 2px $t-red;
+  }
 }

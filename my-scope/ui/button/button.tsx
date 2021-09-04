@@ -21,7 +21,7 @@ export type ButtonProps = {
 	 */
   loading?: boolean,
   activeWhenLoading?: string,
-  variant?: string
+  variant?: 'primary' | 'secondary',
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 /**

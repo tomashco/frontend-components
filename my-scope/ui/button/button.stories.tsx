@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-// import Typography from '@bit/mui-org.material-ui.typography';
+import {typography} from '@my-scope/styles.typography';
 
 import Button from './button';
 
@@ -10,11 +10,12 @@ export default {
 } as Meta;
 
 const Template = (args) =>
+<div className={typography}>
   <Button
     onClick={() => alert('on click')}
     {...args}
-    children={<h1>Click me!</h1>}
-    />;
+    >Click me!</Button>
+    </div>;
 
 export const Primary = Template.bind({});
 

@@ -1,9 +1,15 @@
 import React from 'react';
 import Button from './button';
-import { typography } from '@my-scope/typography';
+import { typography } from '@my-scope/styles.typography';
 
-export const BasicButton = () => (
-  <div className={typography} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-    <Button onClick={() => alert('on click')}>Click</Button>
+export const PrimaryButton = () => (
+  <div className={typography} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column' }}>
+    <Button variant='primary' onClick={() => alert('on click')}>Primary</Button>
+  </div>
+);
+
+export const SecondaryButton = () => (
+  <div className={typography} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column' }}>
+    <Button variant='secondary' onClick={() => alert('on click')}>Secondary</Button>
   </div>
 );
