@@ -1,0 +1,44 @@
+// Typography generator
+
+// :root {
+//   // purple
+//   --p70: #3e29df;
+//   --p60: #5d4aec;
+//   --p50: #6c5ce7;
+//   --p40: #897dec;
+//   --p30: #c9c3f6;
+//   --p20: #eceaff;
+// }
+
+// Light Theme
+
+.typography {
+  font-family: "Arial", Arial, Helvetica, sans-serif;
+
+  h1 {
+    font-size: large;
+    text-transform: uppercase;
+  }
+
+  // [data-variant="button"] {
+  //   color: #ff0000;
+  // }
+  button {
+    text-transform: uppercase;
+  }
+}
+
+// Dark Theme
+
+// body[data-theme="dark"] .colors {
+// --light-10: var(--dark-10);
+// --light-30: var(--dark-30);
+// --light-50: var(--dark-50);
+
+// color: var(--d10);
+// --text-color: var(--d10);
+// --text-color-heavy: var(--w20);
+// --text-color-light: var(--d30);
+// --text-inactive: var(--d40);
+// --text-inactive-heavy: var(--d30);
+// }

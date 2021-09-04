@@ -2,8 +2,7 @@ import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
 
 // //@ts-ignore
-// import Spinner from '@bit/bit.base-ui.ellipsis';
-import ClipLoader from '@bit/davidhu2000.react-spinners.clip-loader';
+import Spinner from '@bit/bit.base-ui.ellipsis';
 
 // import { DotsLoader } from '@teambit/base-ui.elements.dots-loader';
 import styles from './button.module.scss';
@@ -40,7 +39,7 @@ export default class Button extends Component<ButtonProps> {
   private unmounted = false;
 
   static defaultProps = {
-    loader: <ClipLoader />,
+    loader: <Spinner />,
     loading: false,
   };
 
