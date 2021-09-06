@@ -1,0 +1,23 @@
+// :root {
+//     --cols: 3;
+// }
+
+.baseGrid {
+    display: flex;
+    justify-content: center;
+    // var(--cols)
+    [data-variant="container"] {
+        flex-direction: column;
+        justify-content: center;
+    } 
+
+    [data-variant="row"] {
+        flex-direction: row;
+        width: 100%;
+        
+    } 
+
+    [data-variant="default"] {
+        flex-direction: column;
+    } 
+}
