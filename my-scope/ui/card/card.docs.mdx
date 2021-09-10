@@ -1,22 +1,30 @@
 ---
 description: 'A Card component.'
-labels: ['label1', 'label2', 'label3']
+labels: ['card', 'flex']
 ---
 
 import { Card } from './card';
 
-## React Component for rendering text
+## React Component for rendering a Card
 
-A basic div that renders some text
+A basic card that renders props
 
 ### Component usage
 ```js
-<Card text="hello from Card" />
+<Card 
+    imgSrc='https://randomwordgenerator.com/img/picture-generator/54e1d3424d52ad14f1dc8460962e33791c3ad6e04e507440722d72d59144cd_640.jpg'
+    title='The first'
+    text='this is card 1'
+    />
 ```
 
 ### Using props to customize the text
 
-Modify the text to see it change live:
+Modify the props to see it change live:
 ```js live
-<Card text="hello from Card" />
+<Card 
+    imgSrc='https://randomwordgenerator.com/img/picture-generator/54e1d3424d52ad14f1dc8460962e33791c3ad6e04e507440722d72d59144cd_640.jpg'
+    title='This is a generic card'
+    text='and here is some text too'
+    />
 ```

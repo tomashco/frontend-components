@@ -2,9 +2,9 @@ $shit_gray: #696969;
 
 .baseCard {
   border: 1px solid $shit_gray;
-  margin: 1em;
+  // margin: 1em;
   // width: 30%;
-  height: 300px;
+  min-height: 300px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 5px 10px #ccc;
