@@ -2,15 +2,15 @@ import React from 'react';
 import { Card } from './card';
 
 export const BasicCard = () => (
-  <Card 
-        title='a generic card without image'
-        text='this some text styled as paragraph'
+  <Card
+        title="a generic card without image"
+        text="this some text styled as paragraph"
         />
 );
 export const cardWithImg = () => (
-  <Card 
-        imgSrc='https://randomwordgenerator.com/img/picture-generator/54e1d3424d52ad14f1dc8460962e33791c3ad6e04e507440722d72d59144cd_640.jpg'
-        title='a generic card'
-        text='this some text styled as paragraph'
+  <Card
+        imgSrc="https://randomwordgenerator.com/img/picture-generator/54e1d3424d52ad14f1dc8460962e33791c3ad6e04e507440722d72d59144cd_640.jpg"
+        title="a generic card"
+        text="this some text styled as paragraph"
         />
 );

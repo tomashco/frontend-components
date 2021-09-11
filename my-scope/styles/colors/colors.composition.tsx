@@ -5,13 +5,13 @@ const textColors = [
   '--text-color',
   '--text-color-heavy',
   '--text-color-light',
-  '--text-inactive'
+  '--text-inactive',
 ];
 const borderColors = [
   '--border-color',
   '--border-color-heavy',
   '--border-color-light',
-  '--border-color-lightest'
+  '--border-color-lightest',
 ];
 
 const primaryColors = [
@@ -22,7 +22,7 @@ const primaryColors = [
   '--primary-text-heavy',
   '--text-on-primary',
   '--primary-bg',
-  '--primary-bg-heavy'
+  '--primary-bg-heavy',
 ];
 const secondaryColors = [
   '--secondary-color',
@@ -32,7 +32,7 @@ const secondaryColors = [
   '--secondary-text-heavy',
   '--text-on-secondary',
   '--secondary-bg',
-  '--secondary-bg-heavy'
+  '--secondary-bg-heavy',
 ];
 const bgColors = [
   '--bg-color',
@@ -45,14 +45,14 @@ const bgColors = [
   '--bg-modal',
   '--bg-tooltip',
   '--bg-tooltip-heavy',
-  '--bg-dent'
+  '--bg-dent',
 ];
 const errorColors = [
   '--error-color',
   '--error-heavy',
   '--error-light',
   '--error-bg',
-  '--error-bg-heavy'
+  '--error-bg-heavy',
 ];
 
 export function PrimaryColors() {
@@ -123,7 +123,7 @@ function ColorBox({ colorName }: { colorName: string }) {
           height: 20,
           borderRadius: 4,
           marginRight: 8,
-          border: '1px solid black'
+          border: '1px solid black',
         }}
         data-testid={colorName}></div>
       <div>{colorName}</div>

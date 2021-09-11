@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import {typography} from '@my-scope/styles.typography';
+import { typography } from '@my-scope/styles.typography';
 
 import Button from './button';
 
@@ -9,8 +9,7 @@ export default {
   component: Button,
 } as Meta;
 
-const Template = (args) =>
-<div className={typography}>
+const Template = (args) => <div className={typography}>
   <Button
     onClick={() => alert('on click')}
     {...args}

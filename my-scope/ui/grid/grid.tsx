@@ -1,26 +1,35 @@
-import React, { ReactNode } from 'react';
-import classNames from 'classnames';
+import React from "react";
 
-import styles from './grid.module.scss';
+import classNames from "classnames";
 
+import styles from "./grid.module.scss";
 
 export type GridProps = {
-  container?: boolean,
-  row?: boolean
+  container?: boolean;
+  row?: boolean;
   // item?: boolean,
   // cols?: number,
-  children: ReactNode,
-  variant?: 'container' | 'item'
-  className?: string,
+  children: React.ReactNode | React.ReactNodeArray;
+  variant?: "container" | "item";
+  className?: string;
 };
 
 // gridContainer
 
 // gridItem
 
-export function Grid({ container, row, children, className, variant }: GridProps) {
+export function Grid({
+  container,
+  row,
+  children,
+  className,
+  variant,
+}: GridProps) {
   return (
-    <div data-variant={container? 'container' : row? 'row' : 'default'} className={classNames(className, styles.baseGrid, variant)}>
+    <div
+      data-variant={container ? "container" : row ? "row" : "default"}
+      className={classNames(className, styles.baseGrid, variant)}
+    >
       {children}
     </div>
   );
