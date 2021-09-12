@@ -1,4 +1,4 @@
-import styles from './typography.module.scss';
+import styles from "./typography.module.scss";
 
 const { typography } = styles;
 export { typography };

@@ -1,4 +1,4 @@
-import styles from './colors.module.scss';
+import styles from "./colors.module.scss";
 
 const { colors } = styles;
 export { colors };

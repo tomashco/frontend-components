@@ -1,9 +1,11 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { PrimaryColors } from './colors.composition';
+import React from "react";
 
-it('renders the primary color', () => {
+import { render } from "@testing-library/react";
+
+import { PrimaryColors } from "./colors.composition";
+
+it("renders the primary color", () => {
   const { getByTestId } = render(<PrimaryColors />);
-  const primary = getByTestId('--primary-color');
+  const primary = getByTestId("--primary-color");
   expect(primary).toBeTruthy();
 });

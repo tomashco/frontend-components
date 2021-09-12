@@ -1,19 +1,37 @@
-import React from 'react';
-import { typography } from '@my-scope/styles.typography';
-import Button from './button';
+import React from "react";
+
+import { typography } from "@my-scope/styles.typography";
+
+import Button from "./button";
 
 export const PrimaryButton = () => (
-  <div className={typography} style={{
-    display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
-  }}>
-    <Button variant="primary" onClick={() => alert('on click')}>Primary</Button>
+  <div
+    className={typography}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+    }}
+  >
+    <Button variant="primary" onClick={() => alert("on click")}>
+      Primary
+    </Button>
   </div>
 );
 
 export const SecondaryButton = () => (
-  <div className={typography} style={{
-    display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
-  }}>
-    <Button variant="secondary" onClick={() => alert('on click')}>Secondary</Button>
+  <div
+    className={typography}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+    }}
+  >
+    <Button variant="secondary" onClick={() => alert("on click")}>
+      Secondary
+    </Button>
   </div>
 );

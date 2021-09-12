@@ -1,58 +1,59 @@
-import React from 'react';
-import { colors } from './index';
+import React from "react";
+
+import { colors } from "./index";
 
 const textColors = [
-  '--text-color',
-  '--text-color-heavy',
-  '--text-color-light',
-  '--text-inactive',
+  "--text-color",
+  "--text-color-heavy",
+  "--text-color-light",
+  "--text-inactive",
 ];
 const borderColors = [
-  '--border-color',
-  '--border-color-heavy',
-  '--border-color-light',
-  '--border-color-lightest',
+  "--border-color",
+  "--border-color-heavy",
+  "--border-color-light",
+  "--border-color-lightest",
 ];
 
 const primaryColors = [
-  '--primary-color',
-  '--primary-heavy',
-  '--primary-light',
-  '--primary-text',
-  '--primary-text-heavy',
-  '--text-on-primary',
-  '--primary-bg',
-  '--primary-bg-heavy',
+  "--primary-color",
+  "--primary-heavy",
+  "--primary-light",
+  "--primary-text",
+  "--primary-text-heavy",
+  "--text-on-primary",
+  "--primary-bg",
+  "--primary-bg-heavy",
 ];
 const secondaryColors = [
-  '--secondary-color',
-  '--secondary-heavy',
-  '--secondary-light',
-  '--secondary-text',
-  '--secondary-text-heavy',
-  '--text-on-secondary',
-  '--secondary-bg',
-  '--secondary-bg-heavy',
+  "--secondary-color",
+  "--secondary-heavy",
+  "--secondary-light",
+  "--secondary-text",
+  "--secondary-text-heavy",
+  "--text-on-secondary",
+  "--secondary-bg",
+  "--secondary-bg-heavy",
 ];
 const bgColors = [
-  '--bg-color',
-  '--bg-heavy',
-  '--bg-heaviest',
-  '--bg-heaviest',
-  '--bg-bedrock',
-  '--bg-navigation',
-  '--bg-overlay',
-  '--bg-modal',
-  '--bg-tooltip',
-  '--bg-tooltip-heavy',
-  '--bg-dent',
+  "--bg-color",
+  "--bg-heavy",
+  "--bg-heaviest",
+  "--bg-heaviest",
+  "--bg-bedrock",
+  "--bg-navigation",
+  "--bg-overlay",
+  "--bg-modal",
+  "--bg-tooltip",
+  "--bg-tooltip-heavy",
+  "--bg-dent",
 ];
 const errorColors = [
-  '--error-color',
-  '--error-heavy',
-  '--error-light',
-  '--error-bg',
-  '--error-bg-heavy',
+  "--error-color",
+  "--error-heavy",
+  "--error-light",
+  "--error-bg",
+  "--error-bg-heavy",
 ];
 
 export function PrimaryColors() {
@@ -115,7 +116,7 @@ export function ErrorColors() {
 
 function ColorBox({ colorName }: { colorName: string }) {
   return (
-    <div style={{ display: 'flex', borderRadius: 4, marginBottom: 4 }}>
+    <div style={{ display: "flex", borderRadius: 4, marginBottom: 4 }}>
       <div
         style={{
           background: `var(${colorName})`,
@@ -123,9 +124,10 @@ function ColorBox({ colorName }: { colorName: string }) {
           height: 20,
           borderRadius: 4,
           marginRight: 8,
-          border: '1px solid black',
+          border: "1px solid black",
         }}
-        data-testid={colorName}></div>
+        data-testid={colorName}
+      ></div>
       <div>{colorName}</div>
     </div>
   );

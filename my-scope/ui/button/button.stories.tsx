@@ -1,27 +1,29 @@
-import React from 'react';
-import { Meta } from '@storybook/react';
-import { typography } from '@my-scope/styles.typography';
+import React from "react";
 
-import Button from './button';
+import { typography } from "@my-scope/styles.typography";
+import { Meta } from "@storybook/react";
+
+import Button from "./button";
 
 export default {
-  title: 'inputs/Button',
+  title: "inputs/Button",
   component: Button,
 } as Meta;
 
-const Template = (args) => <div className={typography}>
-  <Button
-    onClick={() => alert('on click')}
-    {...args}
-    >Click me!</Button>
-    </div>;
+const Template = (args) => (
+  <div className={typography}>
+    <Button onClick={() => alert("on click")} {...args}>
+      Click me!
+    </Button>
+  </div>
+);
 
 export const Primary = Template.bind({});
 
 Primary.args = {
   // children: 'Click Me!',
   isLoading: false,
-  variant: 'primary',
+  variant: "primary",
 };
 
 export const Secondary = Template.bind({});
@@ -29,5 +31,5 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   // children: 'Click Me!',
   isLoading: false,
-  variant: 'secondary',
+  variant: "secondary",
 };

@@ -1,6 +1,8 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { typography } from './index';
+import React from "react";
+
+import { render } from "@testing-library/react";
+
+import { typography } from "./index";
 
 // it('should render with the correct text', () => {
 //   const { getByText } = render(<div className={typography}>

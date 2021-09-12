@@ -1,23 +1,22 @@
-import React from 'react';
-import classNames from 'classnames';
-import { typography } from '@my-scope/styles.typography';
+import React from "react";
 
-import styles from './card.module.scss';
+import { typography } from "@my-scope/styles.typography";
+import classNames from "classnames";
+
+import styles from "./card.module.scss";
 
 export type CardProps = {
-  title?: string,
-  text: string,
-  imgSrc?: string,
-  alt?: string,
-  price?: number,
-  buttonText?: string,
+  title?: string;
+  text: string;
+  imgSrc?: string;
+  alt?: string;
+  price?: number;
+  buttonText?: string;
 
-  className?: string
+  className?: string;
 };
 
-export function Card({
-  title, text, className, imgSrc,
-}: CardProps) {
+export function Card({ title, text, className, imgSrc }: CardProps) {
   return (
     <div className={classNames(className, styles.baseCard, typography)}>
       {imgSrc && <img src={imgSrc} alt="imgSrc" />}

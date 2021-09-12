@@ -1,11 +1,12 @@
-import React, { Component, ReactNode } from 'react';
-import classNames from 'classnames';
+import React, { Component, ReactNode } from "react";
+
+import Spinner from "@bit/bit.base-ui.ellipsis";
+import classNames from "classnames";
 
 // //@ts-ignore
-import Spinner from '@bit/bit.base-ui.ellipsis';
 
 // import { DotsLoader } from '@teambit/base-ui.elements.dots-loader';
-import styles from './button.module.scss';
+import styles from "./button.module.scss";
 
 // const defaultSpinner = (
 // 	<Spinner color="#ffffff" size={18} style={{ verticalAlign: 'middle' }} />
@@ -13,15 +14,15 @@ import styles from './button.module.scss';
 
 export type ButtonProps = {
   /**
-	 * loader to show while button is busy. Turns on when onClick returns a promise (until it resolves), or when `loading={true}`.
-	 */
-  loader?: ReactNode,
+   * loader to show while button is busy. Turns on when onClick returns a promise (until it resolves), or when `loading={true}`.
+   */
+  loader?: ReactNode;
   /**
-	 * explicitly toggle loader on and off
-	 */
-  loading?: boolean,
-  activeWhenLoading?: string,
-  variant?: 'primary' | 'secondary',
+   * explicitly toggle loader on and off
+   */
+  loading?: boolean;
+  activeWhenLoading?: string;
+  variant?: "primary" | "secondary";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 /**
@@ -71,26 +72,35 @@ export default class Button extends Component<ButtonProps> {
 
   render() {
     const {
-      onClick, className, variant, children, loader, loading, disabled, activeWhenLoading = false, ...rest
+      onClick,
+      className,
+      variant,
+      children,
+      loader,
+      loading,
+      disabled,
+      activeWhenLoading = false,
+      ...rest
     } = this.props;
 
     // ignore internal state when component is controlled
-    const isLoading = (loading !== undefined && loading) || this.state.isLoading;
+    const isLoading =
+      (loading !== undefined && loading) || this.state.isLoading;
 
     const content = isLoading ? loader : children;
     const disabledByLoading = isLoading && !activeWhenLoading;
 
     return (
-			<button
-				data-bit-id="teambit.base-ui/input/button"
-				{...rest}
-				disabled={disabled || disabledByLoading}
+      <button
+        data-bit-id="teambit.base-ui/input/button"
+        {...rest}
+        disabled={disabled || disabledByLoading}
         data-variant={variant}
-				onClick={this.handleClick}
-				className={classNames(className, styles.baseButton)}
-			>
-				{content}
-			</button>
+        onClick={this.handleClick}
+        className={classNames(className, styles.baseButton)}
+      >
+        {content}
+      </button>
     );
   }
 }
