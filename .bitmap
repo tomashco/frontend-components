@@ -13,37 +13,37 @@
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/mock/products"
+        "rootDir": "minibit-ui/mock/products"
     },
     "styles/colors": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/styles/colors"
+        "rootDir": "minibit-ui/styles/colors"
     },
     "styles/typography": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/styles/typography"
+        "rootDir": "minibit-ui/styles/typography"
     },
     "ui/button": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/ui/button"
+        "rootDir": "minibit-ui/ui/button"
     },
     "ui/card": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/ui/card"
+        "rootDir": "minibit-ui/ui/card"
     },
     "ui/grid": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "my-scope/ui/grid"
+        "rootDir": "minibit-ui/ui/grid"
     },
     "$schema-version": "14.9.0"
 }

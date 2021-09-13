@@ -1,6 +1,6 @@
 import React from "react";
 
-import { typography } from "@my-scope/styles.typography";
+import { typography } from "@minibit-ui/styles.typography";
 import classNames from "classnames";
 
 import styles from "./card.module.scss";

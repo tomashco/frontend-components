@@ -1,7 +1,7 @@
 import React from "react";
 
-import { mockProductList } from "@my-scope/mock.products";
-import { Card } from "@my-scope/ui.card";
+import { mockProductList } from "@minibit-ui/mock.products";
+import { Card } from "@minibit-ui/ui.card";
 
 import { Grid } from "./grid";
 
