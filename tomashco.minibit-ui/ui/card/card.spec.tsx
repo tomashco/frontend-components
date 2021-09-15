@@ -6,6 +6,6 @@ import { BasicCard } from "./card.composition";
 
 it("should render with the correct text", () => {
   const { getByText } = render(<BasicCard />);
-  const rendered = getByText("hello from Card");
+  const rendered = getByText("this some text styled as paragraph");
   expect(rendered).toBeTruthy();
 });

@@ -4,7 +4,7 @@
     "name": "bit-workspace",
     "icon": "https://static.bit.dev/bit-logo.svg",
     "defaultDirectory": "{scope}/{name}",
-    "defaultScope": "minibit-ui"
+    "defaultScope": "tomashco.minibit-ui"
   },
   "teambit.dependencies/dependency-resolver": {
     "packageManager": "teambit.dependencies/yarn",

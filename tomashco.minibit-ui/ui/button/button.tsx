@@ -1,6 +1,6 @@
 import React, { Component, ReactNode } from "react";
 
-import Spinner from "@bit/bit.base-ui.ellipsis";
+// import Spinner from "@bit/bit.base-ui.ellipsis";
 import classNames from "classnames";
 
 // //@ts-ignore
@@ -40,7 +40,7 @@ export default class Button extends Component<ButtonProps> {
   private unmounted = false;
 
   static defaultProps = {
-    loader: <Spinner />,
+    loader: "loading...",
     loading: false,
   };
 

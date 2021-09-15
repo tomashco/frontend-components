@@ -1,6 +1,6 @@
 import React from "react";
 
-import { typography } from "@minibit-ui/styles.typography";
+import { typography } from "@tomashco/minibit-ui.styles.typography";
 
 import Button from "./button";
 

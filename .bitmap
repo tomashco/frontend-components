@@ -10,40 +10,40 @@
 
 {
     "mock/products": {
-        "scope": "",
-        "version": "",
+        "scope": "tomashco.minibit-ui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "minibit-ui/mock/products"
+        "rootDir": "tomashco.minibit-ui/mock/products"
     },
     "styles/colors": {
-        "scope": "",
-        "version": "",
+        "scope": "tomashco.minibit-ui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "minibit-ui/styles/colors"
+        "rootDir": "tomashco.minibit-ui/styles/colors"
     },
     "styles/typography": {
-        "scope": "",
-        "version": "",
+        "scope": "tomashco.minibit-ui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "minibit-ui/styles/typography"
+        "rootDir": "tomashco.minibit-ui/styles/typography"
     },
     "ui/button": {
-        "scope": "",
-        "version": "",
+        "scope": "tomashco.minibit-ui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "minibit-ui/ui/button"
+        "rootDir": "tomashco.minibit-ui/ui/button"
     },
     "ui/card": {
-        "scope": "",
-        "version": "",
+        "scope": "tomashco.minibit-ui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "minibit-ui/ui/card"
+        "rootDir": "tomashco.minibit-ui/ui/card"
     },
     "ui/grid": {
-        "scope": "",
-        "version": "",
+        "scope": "tomashco.minibit-ui",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "minibit-ui/ui/grid"
+        "rootDir": "tomashco.minibit-ui/ui/grid"
     },
     "$schema-version": "14.9.0"
 }

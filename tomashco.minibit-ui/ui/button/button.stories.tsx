@@ -1,7 +1,7 @@
 import React from "react";
 
-import { typography } from "@minibit-ui/styles.typography";
 import { Meta } from "@storybook/react";
+import { typography } from "@tomashco/minibit-ui.styles.typography";
 
 import Button from "./button";
 
