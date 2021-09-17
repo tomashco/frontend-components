@@ -4,15 +4,20 @@ $t-gray-light: #ccc;
 $t-gray-dark: rgb(148, 148, 148);
 
 .baseButton {
-  transition: all 180ms ease-in-out;
+  height: 50px;
+  padding: 0.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   border: none;
   user-select: none;
   cursor: pointer;
   font: inherit;
   border-radius: 1em;
-  padding: 0.5em;
-  // width: 100px;
-  height: 50px;
+  
+  transition: all 180ms ease-in-out;
 }
 
 [data-variant="primary"] {
@@ -27,9 +32,9 @@ $t-gray-dark: rgb(148, 148, 148);
 
 [data-variant="secondary"] {
   background-color: #ffffff;
-  box-shadow: 0 0 10px $t-gray-light, 0 0 0 2px $t-red;
+  box-shadow: 0 0 10px $t-gray-light;
 
   &:hover {
-    box-shadow: 0 0 10px $t-gray-dark, 0 0 0 2px $t-red;
+    box-shadow: 0 0 10px $t-gray-dark;
   }
 }

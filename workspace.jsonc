@@ -19,17 +19,20 @@
         "@types/react": "17.0.15",
         "chai": "4.3.4",
         "classnames": "2.3.1",
-        "sinon": "11.1.2"
+        "sinon": "11.1.2",
+        "@storybook/react": "-"
       },
       "peerDependencies": {
         "@testing-library/react": "11.2.6",
         "react": "16.13.1",
-        "react-dom": "16.13.1"
+        "react-dom": "16.13.1",
+        "@storybook/react": "^6.3.7"
       }
     },
     "packageManagerArgs": [],
     "devFilePatterns": [
-      "**/*.spec.ts"
+      "**/*.stories.@(js|jsx|ts|tsx)",
+      "**/*.spec.@(js|jsx|ts|tsx)"
     ],
     "strictPeerDependencies": true,
     "installFromBitDevRegistry": true,

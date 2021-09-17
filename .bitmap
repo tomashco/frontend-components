@@ -29,19 +29,19 @@
     },
     "ui/button": {
         "scope": "tomashco.minibit-ui",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/ui/button"
     },
     "ui/card": {
         "scope": "tomashco.minibit-ui",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/ui/card"
     },
     "ui/grid": {
         "scope": "tomashco.minibit-ui",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/ui/grid"
     },

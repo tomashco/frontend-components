@@ -2,8 +2,6 @@ $shit_gray: #696969;
 
 .baseCard {
   border: 1px solid $shit_gray;
-  // margin: 1em;
-  // width: 30%;
   min-height: 300px;
   border-radius: 20px;
   overflow: hidden;
@@ -18,6 +16,26 @@ $shit_gray: #696969;
     padding: 0 1em 0.2em 1em;
   }
   img {
-    height: 45%;
+    height: 25em;
+    width: auto;
+    object-fit: cover;
+  }
+  .ctaArea {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2em;
+    align-items: end;
+    flex-grow: 1;
+
+    button {
+      flex: 0 1 calc(25%);
+      display: flex;
+      margin-bottom: 2em;
+      &:last-child {
+        margin-left: 10px;
+      }
+      // margin-left: 20px;
+
+    }
   }
 }

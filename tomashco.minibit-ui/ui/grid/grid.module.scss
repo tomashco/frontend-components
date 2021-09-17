@@ -1,29 +1,7 @@
-// :root {
-//     --cols: 3;
-// }
-
 .baseGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-column-gap: 2rem;
     grid-row-gap: 3rem;
     align-items: center;
-  
-    // display: flex;
-    // justify-content: center;
-    // // var(--cols)
-    // [data-variant="container"] {
-    //     flex-direction: column;
-    //     justify-content: center;
-    // } 
-
-    // [data-variant="row"] {
-    //     flex-direction: row;
-    //     width: 100%;
-        
-    // } 
-
-    // [data-variant="default"] {
-    //     flex-direction: column;
-    // } 
 }

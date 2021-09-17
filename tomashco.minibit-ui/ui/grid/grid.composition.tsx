@@ -15,7 +15,8 @@ export const BasicGrid = () => (
         alt={item.alt}
         imgSrc={item.src}
         price={item.price}
-        buttonText={item.buttonText}
+        primaryBtnText={item.buttonText}
+        primaryBtnClickHandler={() => alert(`card ${item.title} clicked`)}
       />
     ))}
   </Grid>
