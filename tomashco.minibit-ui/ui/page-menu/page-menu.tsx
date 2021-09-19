@@ -1,34 +1,49 @@
 import React, { useState } from "react";
 
-import { colors } from "@tomashco/minibit-ui.styles.colors";
-import { typography } from "@tomashco/minibit-ui.styles.typography";
 import ToggleButton from "@tomashco/minibit-ui.ui.toggle-button";
-import classNames from "classnames";
 import styled, { css } from "styled-components";
+
+import { burgerIcon } from "./helper";
 
 // import styles from "./page-menu.module.scss";
 
 const StyledPageMenu = styled.div`
   height: 4em;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 `;
-// add this inside style to add conditional styling
-// ${(props) =>
-//   props.primary &&
-//   css`
-//     background: palevioletred;
-//     color: white;
-// `};
 
+const StyledToggleButton = styled.div`
+  scale: 0.4;
+`;
+
+const CollapsibleMenu = styled.div`
+  label {
+    display: block;
+    cursor: pointer;
+    color: var(--primary-color);
+    background: var(--primary-color);
+    -webkit-mask-image: url("${burgerIcon("#000")}");
+    mask-image: url("${burgerIcon("#000")}");
+    width: 17px;
+    height: 47px;
+    padding: 10px 0 10px 50px;
+  }
+  input#menu {
+    display: none;
+  }
+`;
+//
 const StyledMenuList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 0 3em;
   height: 100%;  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
     a {
       height: 100%;
       display: flex;
@@ -60,27 +75,36 @@ export default function PageMenu({ items, toggleTheme }: PageMenuProps) {
   const [currentTheme, setCurrentTheme] = useState("light");
   const themeInverted = currentTheme === "dark" ? "light" : "dark";
   return (
-    <StyledPageMenu className={classNames(typography, colors)}>
-      <StyledMenuList>
-        {items.map(
-          (
-            menuItem: { ctaLink: string; ctaText: string },
-            itemIndex: number
-          ) => (
-            <li key={itemIndex}>
-              <a href={menuItem.ctaLink}>{menuItem.ctaText}</a>
-            </li>
-          )
-        )}
-      </StyledMenuList>
+    <StyledPageMenu>
+      <CollapsibleMenu>
+        <input type="checkbox" id="menu" />
+        <label htmlFor="menu">Menu</label>
+        <StyledMenuList>
+          {items.map(
+            (
+              menuItem: { ctaLink: string; ctaText: string },
+              itemIndex: number
+            ) => (
+              <li key={itemIndex}>
+                <a href={menuItem.ctaLink}>{menuItem.ctaText}</a>
+              </li>
+            )
+          )}
+        </StyledMenuList>
+      </CollapsibleMenu>
       {toggleTheme && (
-        <ToggleButton
-          clickHandler={(e) => {
-            document.documentElement.setAttribute("data-theme", themeInverted);
-            (e.target as HTMLInputElement).value &&
-              setCurrentTheme(themeInverted);
-          }}
-        />
+        <StyledToggleButton>
+          <ToggleButton
+            clickHandler={(e) => {
+              document.documentElement.setAttribute(
+                "data-theme",
+                themeInverted
+              );
+              (e.target as HTMLInputElement).value &&
+                setCurrentTheme(themeInverted);
+            }}
+          />
+        </StyledToggleButton>
       )}
     </StyledPageMenu>
   );
