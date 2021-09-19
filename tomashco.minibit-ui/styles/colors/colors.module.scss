@@ -88,7 +88,7 @@
 
 // Light Theme
 
-body[data-theme="light"] .colors,
+html[data-theme="light"] .colors,
 .colors {
   --primary-20: var(--p20);
   --primary-50: var(--p50);
@@ -192,7 +192,7 @@ body[data-theme="light"] .colors,
 
 // Dark Theme
 
-body[data-theme="dark"] .colors {
+html[data-theme="dark"] .colors {
   --light-10: var(--dark-10);
   --light-30: var(--dark-30);
   --light-50: var(--dark-50);

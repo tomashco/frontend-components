@@ -1,0 +1,52 @@
+---
+description: 'A PageMenu component.'
+labels: ['menu', 'component']
+---
+
+import PageMenu from './page-menu';
+
+## React Component for rendering text
+
+A basic menu which accepts an array of links and displays them in a nice way
+
+### Component usage
+```js
+<PageMenu
+    items={[
+      {
+        ctaLink: "#",
+        ctaText: "My projects",
+      },
+      {
+        ctaLink: "#",
+        ctaText: "About me",
+      },
+      {
+        ctaLink: "#",
+        ctaText: "Reach me out",
+      },
+    ]}
+  />
+```
+
+### Using props to customize the links displayed
+
+Modify the text to see it change live:
+```js live
+<PageMenu
+    items={[
+      {
+        ctaLink: "#",
+        ctaText: "My projects",
+      },
+      {
+        ctaLink: "#",
+        ctaText: "About me",
+      },
+      {
+        ctaLink: "#",
+        ctaText: "Reach me out",
+      },
+    ]}
+  />
+```

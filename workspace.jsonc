@@ -3,7 +3,7 @@
   "teambit.workspace/workspace": {
     "name": "bit-workspace",
     "icon": "https://static.bit.dev/bit-logo.svg",
-    "defaultDirectory": "{scope}/{name}",
+    "defaultDirectory": "tomashco.minibit-ui/{name}",
     "defaultScope": "tomashco.minibit-ui"
   },
   "teambit.dependencies/dependency-resolver": {
@@ -14,19 +14,20 @@
         "@bit/bit.base-ui.ellipsis": "1.1.7",
         "@bit/mui-org.material-ui.typography": "4.9.10",
         "@learn-bit-react/base-ui.figma.figma-embed": "0.0.3",
+        "@storybook/react": "-",
         "@teambit/base-ui.elements.dots-loader": "1.0.3",
         "@teambit/react.eslint-config-bit-react": "0.0.438",
         "@types/react": "17.0.15",
         "chai": "4.3.4",
         "classnames": "2.3.1",
         "sinon": "11.1.2",
-        "@storybook/react": "-"
+        "styled-components": "5.3.1"
       },
       "peerDependencies": {
+        "@storybook/react": "^6.3.7",
         "@testing-library/react": "11.2.6",
         "react": "16.13.1",
-        "react-dom": "16.13.1",
-        "@storybook/react": "^6.3.7"
+        "react-dom": "16.13.1"
       }
     },
     "packageManagerArgs": [],
