@@ -3,6 +3,7 @@ import React from "react";
 import { colors } from "@tomashco/minibit-ui.styles.colors";
 import { typography } from "@tomashco/minibit-ui.styles.typography";
 import PageMenu from "@tomashco/minibit-ui.ui.page-menu";
+import PageTitle from "@tomashco/minibit-ui.ui.page-title";
 import classNames from "classnames";
 import styled, { css } from "styled-components";
 
@@ -21,17 +22,18 @@ const Page = styled.div`
 const Container = styled.div`
   width: 90%;
   background: var(--primary-bg-heavy);
-  height: 100vh;
+  padding: 2em 2em 0 2em;
   ${(props) =>
     props.boxed &&
     css`
-      padding: 2em;
+      margin: 2em 4em 2em 4em;
     `};
 `;
 
 export type PortfolioProps = {
   pageTitle: string;
   catchyPhrase?: string;
+  titleImg?: string;
   menuItems: Array<Object>;
 };
 
@@ -39,13 +41,18 @@ export function Portfolio({
   menuItems,
   pageTitle,
   catchyPhrase,
+  titleImg,
 }: PortfolioProps) {
   return (
     <div className={classNames(colors, typography)}>
       <Page>
-        <Container>
+        <Container boxed>
           <PageMenu toggleTheme items={menuItems} />
-          {/* <PageTitle title={pageTitle} catchyPhrase={catchyPhrase} /> */}
+          <PageTitle
+            title={pageTitle}
+            catchyPhrase={catchyPhrase}
+            titleImg={titleImg}
+          />
         </Container>
       </Page>
     </div>

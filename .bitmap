@@ -33,12 +33,6 @@
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/styles/typography"
     },
-    "ui/toggle-button": {
-        "scope": "",
-        "version": "",
-        "mainFile": "index.ts",
-        "rootDir": "tomashco.minibit-ui/ui/toggle-button"
-    },
     "ui/button": {
         "scope": "tomashco.minibit-ui",
         "version": "0.0.3",
@@ -62,6 +56,18 @@
         "version": "",
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/ui/page-menu"
+    },
+    "ui/page-title": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "tomashco.minibit-ui/ui/page-title"
+    },
+    "ui/toggle-button": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "tomashco.minibit-ui/ui/toggle-button"
     },
     "$schema-version": "14.9.0"
 }

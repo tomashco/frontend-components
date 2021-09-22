@@ -5,3 +5,8 @@ declare module "*.scss" {
 
   export = content;
 }
+
+declare module "*.png" {
+  const value: any;
+  export = value;
+}

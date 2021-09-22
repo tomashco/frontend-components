@@ -32,6 +32,7 @@ export const BasicPageMenu = () => (
           },
         ]}
       />
+      <h1>this is a generic title</h1>
     </Container>
   </div>
 );
