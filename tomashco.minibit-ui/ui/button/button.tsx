@@ -1,106 +1,80 @@
-import React, { Component, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
-// import Spinner from "@bit/bit.base-ui.ellipsis";
-import classNames from "classnames";
+import styled from "styled-components";
 
-// //@ts-ignore
+const BaseButton = styled.button`
+  height: 50px;
+  padding: 0.5em 1em;
 
-// import { DotsLoader } from '@teambit/base-ui.elements.dots-loader';
-import styles from "./button.module.scss";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-// const defaultSpinner = (
-// 	<Spinner color="#ffffff" size={18} style={{ verticalAlign: 'middle' }} />
-// );
+  user-select: none;
+  cursor: pointer;
+
+  box-shadow: ${({ strong }) =>
+    strong ? "-2px 5px 0 0px var(--primary-light)" : "none"};
+
+  border-radius: 3em;
+  border: ${({ secondary }) =>
+    secondary ? "4px solid var(--primary-light)" : "none"};
+
+  transition: all 100ms ease-in-out;
+
+  background-color: ${({ disabled, primary, dataTheme }) =>
+    disabled
+      ? "var(--text-inactive)"
+      : primary
+      ? "var(--primary-color)"
+      : "var(--secondary-button)"};
+
+  &:hover {
+    box-shadow: ${({ strong }) =>
+      strong && "-2px 5px 0 0px var(--primary-light)"};
+  }
+
+  &:active {
+    box-shadow: ${({ strong }) =>
+      strong && "-1px 3px 0 0px var(--primary-heavy)"};
+    transform: translateY(4px);
+  }
+`;
 
 export type ButtonProps = {
-  /**
-   * loader to show while button is busy. Turns on when onClick returns a promise (until it resolves), or when `loading={true}`.
-   */
   loader?: ReactNode;
-  /**
-   * explicitly toggle loader on and off
-   */
+  primary?: boolean;
   loading?: boolean;
-  activeWhenLoading?: string;
-  variant?: "primary" | "secondary";
+  secondary?: boolean;
+  disabled?: boolean;
+  strong?: boolean;
+  onClick?: () => void;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-/**
- * Base button, with very basic styles. Accepts all parameters of native html button.
- *
- * If onClick returns a promise, BaseButton will show a loader automatically, until the promise is resolved or rejected.
- * @example
- * <Button onClick={() => api.submitUserData()} loader={<CustomLoader/> } />
- */
-export default class Button extends Component<ButtonProps> {
-  state = { isLoading: false };
+const Button: React.FC<ButtonProps> = ({
+  loader,
+  primary,
+  secondary,
+  disabled,
+  onClick,
+  loading,
+  children,
+  strong,
+  ...rest
+}) => {
+  return (
+    <BaseButton
+      {...rest}
+      disabled={disabled}
+      loading={loading}
+      primary={primary}
+      secondary={secondary}
+      onClick={onClick}
+      strong={strong}
+    >
+      {children}
+    </BaseButton>
+  );
+};
 
-  private activePromises = new Set<Promise<any>>();
-
-  private unmounted = false;
-
-  static defaultProps = {
-    loader: "loading...",
-    loading: false,
-  };
-
-  componentWillUnmount() {
-    this.unmounted = false;
-    this.activePromises = new Set<Promise<any>>();
-  }
-
-  handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    const { onClick } = this.props;
-    if (!onClick) return;
-
-    this.setState({ isLoading: true });
-
-    const promise = Promise.resolve(onClick.call(this, event)).catch(() => {});
-    this.activePromises.add(promise);
-
-    promise.then(() => this.handleResolve(promise));
-  };
-
-  private handleResolve(p: Promise<any>) {
-    if (this.unmounted) return;
-
-    this.activePromises.delete(p);
-    if (this.activePromises.size === 0) {
-      this.setState({ isLoading: false });
-    }
-  }
-
-  render() {
-    const {
-      onClick,
-      className,
-      variant,
-      children,
-      loader,
-      loading,
-      disabled,
-      activeWhenLoading = false,
-      ...rest
-    } = this.props;
-
-    // ignore internal state when component is controlled
-    const isLoading =
-      (loading !== undefined && loading) || this.state.isLoading;
-
-    const content = isLoading ? loader : children;
-    const disabledByLoading = isLoading && !activeWhenLoading;
-
-    return (
-      <button
-        data-bit-id="teambit.base-ui/input/button"
-        {...rest}
-        disabled={disabled || disabledByLoading}
-        data-variant={variant}
-        onClick={this.handleClick}
-        className={classNames(className, styles.baseButton)}
-      >
-        {content}
-      </button>
-    );
-  }
-}
+export default Button;

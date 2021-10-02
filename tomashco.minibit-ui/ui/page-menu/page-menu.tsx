@@ -69,7 +69,7 @@ const StyledMenuList = styled.ul`
     display: flex;
     align-items: center;
     text-decoration: none;
-    background: transparent;
+    background: var(--secondary-button);
     padding: 0 1em 0 1em;
     margin: 0 0.3em 0 0.3em;
     color: var(--primary-color);

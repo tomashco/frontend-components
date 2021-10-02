@@ -3,15 +3,16 @@ import React from "react";
 import { colors } from "@tomashco/minibit-ui.styles.colors";
 import { typography } from "@tomashco/minibit-ui.styles.typography";
 import PageMenu from "@tomashco/minibit-ui.ui.page-menu";
-import PageTitle from "@tomashco/minibit-ui.ui.page-title";
 import classNames from "classnames";
 import styled, { css } from "styled-components";
 
 const Page = styled.div`
   background: var(--primary-bg);
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+  }
   ${(props) =>
     props.boxed &&
     css`
@@ -22,7 +23,7 @@ const Page = styled.div`
 const Container = styled.div`
   width: 90%;
   background: var(--primary-bg-heavy);
-  padding: 2em 2em 0 2em;
+  padding: 2em 2em 2em 2em;
   ${(props) =>
     props.boxed &&
     css`
@@ -30,29 +31,22 @@ const Container = styled.div`
     `};
 `;
 
-export type PortfolioProps = {
-  pageTitle: string;
-  catchyPhrase?: string;
-  titleImg?: string;
+const PageContent = styled.div``;
+export type PagesContainerProps = {
   menuItems: Array<Object>;
+  children: React.ReactElement;
 };
 
-export function Portfolio({
+export default function PagesContainer({
   menuItems,
-  pageTitle,
-  catchyPhrase,
-  titleImg,
-}: PortfolioProps) {
+  children,
+}: PagesContainerProps) {
   return (
     <div className={classNames(colors, typography)}>
       <Page>
         <Container boxed>
           <PageMenu toggleTheme items={menuItems} />
-          <PageTitle
-            title={pageTitle}
-            catchyPhrase={catchyPhrase}
-            titleImg={titleImg}
-          />
+          <PageContent>{children}</PageContent>
         </Container>
       </Page>
     </div>

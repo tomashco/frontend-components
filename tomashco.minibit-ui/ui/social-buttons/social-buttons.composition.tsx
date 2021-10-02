@@ -4,13 +4,14 @@ import { colors } from "@tomashco/minibit-ui.styles.colors";
 import { typography } from "@tomashco/minibit-ui.styles.typography";
 import classNames from "classnames";
 
-import PageTitle from "./page-title";
+import SocialButtons from "./social-buttons";
 
-export const BasicPageTitle = () => (
+export const BasicSocialButtons = () => (
   <div className={classNames(typography, colors)}>
-    <PageTitle
-      title="This is my page title!"
-      catchyPhrase="and this is a fancy phrase to tell you how much I'm cool"
+    <SocialButtons
+      Linkedin="https://www.linkedin.com/in/tommasomaioli/"
+      GitHub="https://github.com/tomashco"
+      Mail="mailto:tommaso.maioli@gmail.com"
     />
   </div>
 );

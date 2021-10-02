@@ -2,8 +2,8 @@ import React from "react";
 
 import { render } from "@testing-library/react";
 
-import { BasicPortfolio } from "./portfolio.composition";
+import { BasicPortfolioIntro } from "./portfolio-intro.composition";
 
 it("should render the basic portfolio", () => {
-  render(<BasicPortfolio />);
+  render(<BasicPortfolioIntro />);
 });

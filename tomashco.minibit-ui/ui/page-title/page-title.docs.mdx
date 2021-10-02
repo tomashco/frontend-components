@@ -1,22 +1,22 @@
 ---
-description: 'A PageTitle component.'
-labels: ['label1', 'label2', 'label3']
+description: 'A title component.'
+labels: ['title', 'adaptive-font']
 ---
 
-import { PageTitle } from './page-title';
+import PageTitle from './page-title';
 
-## React Component for rendering text
+## React Component for rendering Title
 
-A basic div that renders some text
+A basic container which renders a title and subtitle (if provided)
 
 ### Component usage
 ```js
-<PageTitle text="hello from PageTitle" />
+<PageTitle title="hello from PageTitle" catchyPhrase="this is a catchy phrase to go" />
 ```
 
 ### Using props to customize the text
 
 Modify the text to see it change live:
 ```js live
-<PageTitle text="hello from PageTitle" />
+<PageTitle title="hello from PageTitle" catchyPhrase="this is a catchy phrase to go" />
 ```

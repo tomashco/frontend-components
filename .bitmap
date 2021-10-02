@@ -15,11 +15,17 @@
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/mock/products"
     },
-    "pages/portfolio": {
+    "pages/pages-container": {
         "scope": "",
         "version": "",
         "mainFile": "index.ts",
-        "rootDir": "tomashco.minibit-ui/pages/portfolio"
+        "rootDir": "tomashco.minibit-ui/pages/pages-container"
+    },
+    "pages/portfolio-intro": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "tomashco.minibit-ui/pages/portfolio-intro"
     },
     "styles/colors": {
         "scope": "tomashco.minibit-ui",
@@ -62,6 +68,12 @@
         "version": "",
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/ui/page-title"
+    },
+    "ui/social-buttons": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "tomashco.minibit-ui/ui/social-buttons"
     },
     "ui/toggle-button": {
         "scope": "",
