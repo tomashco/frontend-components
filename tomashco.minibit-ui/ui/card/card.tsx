@@ -13,11 +13,9 @@ export type CardProps = {
   alt?: string;
   price?: number;
   primaryBtnText?: string;
-  primaryBtnClickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  primaryBtnClickHandler?: () => void;
   secondaryBtnText?: string;
-  secondaryBtnClickHandler?: (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => void;
+  secondaryBtnClickHandler?: () => void;
   className?: string;
 };
 
@@ -38,12 +36,12 @@ export function Card({
       <p>{text}</p>
       <div className={styles.ctaArea}>
         {secondaryBtnText && (
-          <Button variant={"secondary"} onClick={secondaryBtnClickHandler}>
+          <Button secondary onClick={secondaryBtnClickHandler}>
             {secondaryBtnText}
           </Button>
         )}
         {primaryBtnText && (
-          <Button variant={"primary"} onClick={primaryBtnClickHandler}>
+          <Button primary onClick={primaryBtnClickHandler}>
             {primaryBtnText}
           </Button>
         )}

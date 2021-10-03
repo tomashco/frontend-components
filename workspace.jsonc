@@ -13,10 +13,6 @@
         "@babel/parser": "7.15.3",
         "@bit/bit.base-ui.ellipsis": "1.1.7",
         "@bit/mui-org.material-ui.typography": "4.9.10",
-        "@fortawesome/fontawesome-svg-core": "1.2.36",
-        "@fortawesome/free-brands-svg-icons": "5.15.4",
-        "@fortawesome/free-solid-svg-icons": "5.15.4",
-        "@fortawesome/react-fontawesome": "0.1.15",
         "@learn-bit-react/base-ui.figma.figma-embed": "0.0.3",
         "@storybook/react": "-",
         "@teambit/base-ui.elements.dots-loader": "1.0.3",
@@ -31,7 +27,8 @@
         "@storybook/react": "^6.3.7",
         "@testing-library/react": "11.2.6",
         "react": "16.13.1",
-        "react-dom": "16.13.1"
+        "react-dom": "16.13.1",
+        "@fortawesome/fontawesome-svg-core": "1.2.36"
       }
     },
     "packageManagerArgs": [],
@@ -45,7 +42,17 @@
   },
   "teambit.workspace/variants": {
     "*": {
-      "teambit.react/react": {}
+      "teambit.react/react": {
+        "rawConfig": {
+          "tsconfig": {
+            "compilerOptions": {
+              "jsx": "react",
+              "esModuleInterop": true,
+              "moduleResolution": "node"
+            }
+          }
+        }
+      }
     }
   }
 }

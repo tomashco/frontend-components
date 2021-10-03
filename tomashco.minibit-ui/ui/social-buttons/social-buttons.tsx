@@ -1,7 +1,7 @@
 import React from "react";
 
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortAwesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "@tomashco/minibit-ui.ui.button";
 import styled from "styled-components";
