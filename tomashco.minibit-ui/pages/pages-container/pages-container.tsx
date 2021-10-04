@@ -8,7 +8,7 @@ import styled, { css } from "styled-components";
 
 const Page = styled.div`
   background: var(--primary-bg);
-  // height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   @media (max-width: 768px) {
