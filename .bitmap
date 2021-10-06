@@ -15,6 +15,12 @@
         "mainFile": "index.ts",
         "rootDir": "tomashco.minibit-ui/mock/products"
     },
+    "mock/projects": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "tomashco.minibit-ui/mock/projects"
+    },
     "pages/pages-container": {
         "scope": "tomashco.minibit-ui",
         "version": "0.0.1",

@@ -1,10 +1,9 @@
 import React from "react";
 
 import PageTitle from "@tomashco/minibit-ui.ui.page-title";
-import SocialButtons from "@tomashco/minibit-ui.ui.social-buttons";
 import styled from "styled-components";
 
-const PageTitleContainer = styled.div`
+const ProjectsListContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -22,49 +21,43 @@ const TitleSection = styled.div`
   justify-content: space-evenly;
 `;
 
-const SocialSection = styled.div`
-  display: flex;
-  align-self: center;
-  @media (max-width: 680px) {
-    margin: 2em auto;
-  }
-`;
+const PersonalProjectsList = styled.div``;
 
-const TitleImg = styled.img`
-  width: 18vw;
-  box-shadow: 20px 15px var(--primary-heavy);
-  background: var(--primary-bg);
-  @media (max-width: 680px) {
-    width: 10em;
-  }
-`;
+const BootcampProjectsList = styled.div``;
 
 export type PortfolioProjectsProps = {
   title: string;
-  catchyPhrase?: string;
-  titleImg?: string;
-  Linkedin?: string;
-  GitHub?: string;
-  Mail?: string;
+  primaryProjects?: Array<Object>;
+  primaryProjectsTitle?: string;
+  secondaryProjects?: Array<Object>;
+  secondaryProjectsTitle?: string;
 };
 
 export default function PortfolioProjects({
   title,
-  catchyPhrase,
-  titleImg,
-  Linkedin,
-  GitHub,
-  Mail,
+  primaryProjects,
+  secondaryProjects,
+  primaryProjectsTitle,
+  secondaryProjectsTitle,
 }: PortfolioProjectsProps) {
   return (
-    <PageTitleContainer>
+    <ProjectsListContainer>
       <TitleSection>
-        <PageTitle title={title} catchyPhrase={catchyPhrase} />
-        <SocialSection>
-          <SocialButtons Linkedin={Linkedin} GitHub={GitHub} Mail={Mail} />
-        </SocialSection>
+        <PageTitle title={title} />
       </TitleSection>
-      {titleImg && <TitleImg src={titleImg} alt={titleImg} />}
-    </PageTitleContainer>
+
+      {primaryProjects && primaryProjectsTitle && (
+        <>
+          <PageTitle title={primaryProjectsTitle} />
+          {/* <PersonalProjectsList>{primaryProjects}</PersonalProjectsList> */}
+        </>
+      )}
+      {secondaryProjects && secondaryProjectsTitle && (
+        <>
+          <PageTitle title={secondaryProjectsTitle} />
+          {/* <BootcampProjectsList>{secondaryProjects}</BootcampProjectsList> */}
+        </>
+      )}
+    </ProjectsListContainer>
   );
 }
