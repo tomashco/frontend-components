@@ -14,11 +14,7 @@ export type GridProps = {
   className?: string;
 };
 
-// gridContainer
-
-// gridItem
-
-export function Grid({
+export default function Grid({
   container,
   row,
   children,

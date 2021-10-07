@@ -2,7 +2,7 @@ import React from "react";
 
 import { Meta } from "@storybook/react";
 
-import { Card } from "./card";
+import Card from "./card";
 
 export default {
   title: "inputs/Card",

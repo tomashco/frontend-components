@@ -1,9 +1,9 @@
 import React from "react";
 
 import { mockProductList } from "@tomashco/minibit-ui.mock.products";
-import { Card } from "@tomashco/minibit-ui.ui.card";
+import Card from "@tomashco/minibit-ui.ui.card";
 
-import { Grid } from "./grid";
+import Grid from "./grid";
 
 export const BasicGrid = () => (
   <Grid>
