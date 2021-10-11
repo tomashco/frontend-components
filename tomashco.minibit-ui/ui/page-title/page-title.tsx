@@ -22,15 +22,15 @@ const Title = styled.div`
 `;
 
 export type PageTitleProps = {
-  title: string;
-  catchyPhrase?: string;
+  title?: string;
+  secondaryTitle?: string;
 };
 
-export default function PageTitle({ title, catchyPhrase }: PageTitleProps) {
+export default function PageTitle({ title, secondaryTitle }: PageTitleProps) {
   return (
     <Title>
       <h1>{title}</h1>
-      {catchyPhrase && <h2>{catchyPhrase}</h2>}
+      {secondaryTitle && <h2>{secondaryTitle}</h2>}
     </Title>
   );
 }

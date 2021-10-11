@@ -5,14 +5,14 @@ export const mockPersonalProjectsList = [
   {
     title: "Personal Portfolio",
     description: "This website has been made ",
-    techStackLabels: ["React", "Bit", "@Tomashco"],
+    techStackLabels: ["React", "Bit", "Typescript"],
     src: portfolioImg,
     dateStart: new Date("September 15, 2021"),
     dateEnd: new Date("October 15, 2021"),
     primaryButtonText: "View Code",
-    primaryButtonLink: "https://github.com/tomashco/mamakitchen",
+    primaryButtonLink: "https://bit.dev/tomashco/minibit-ui/",
     secondaryButtonText: "View Site",
-    secondaryButtonLink: "https://mamakitchen-989f4.firebaseapp.com/",
+    secondaryButtonLink: "https://tomashco.github.io",
   },
   {
     title: "Mamakitchen",

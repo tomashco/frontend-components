@@ -39,7 +39,7 @@ export default function PortfolioProjects({
 
       {primaryProjects && primaryProjectsTitle && (
         <>
-          <PageTitle title={primaryProjectsTitle} />
+          <PageTitle secondaryTitle={primaryProjectsTitle} />
           <PersonalProjectsList>
             <Grid>
               {primaryProjects.map((prj) => (
@@ -66,7 +66,7 @@ export default function PortfolioProjects({
       )}
       {secondaryProjects && secondaryProjectsTitle && (
         <>
-          <PageTitle title={secondaryProjectsTitle} />
+          <PageTitle secondaryTitle={secondaryProjectsTitle} />
           <BootcampProjectsList>
             <Grid>
               {secondaryProjects.map((prj) => (

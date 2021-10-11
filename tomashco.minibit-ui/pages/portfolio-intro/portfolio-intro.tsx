@@ -59,7 +59,7 @@ export default function PortfolioIntro({
   return (
     <PageTitleContainer>
       <TitleSection>
-        <PageTitle title={title} catchyPhrase={catchyPhrase} />
+        <PageTitle title={title} secondaryTitle={catchyPhrase} />
         <SocialSection>
           <SocialButtons Linkedin={Linkedin} GitHub={GitHub} Mail={Mail} />
         </SocialSection>
