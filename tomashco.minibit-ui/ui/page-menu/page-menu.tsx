@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 import ToggleButton from "@tomashco/minibit-ui.ui.toggle-button";
-import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 import { burgerIcon } from "./helper";
 
@@ -107,11 +108,19 @@ export default function PageMenu({ items, toggleTheme }: PageMenuProps) {
         <StyledMenuList state={isChecked}>
           {items.map(
             (
-              menuItem: { ctaLink: string; ctaText: string },
+              menuItem: {
+                ctaLink: string;
+                ctaText: string;
+                isInternal: boolean;
+              },
               itemIndex: number
             ) => (
               <li key={itemIndex}>
-                <a href={menuItem.ctaLink}>{menuItem.ctaText}</a>
+                {menuItem.isInternal ? (
+                  <Link to={menuItem.ctaLink}>{menuItem.ctaText}</Link>
+                ) : (
+                  <a href={menuItem.ctaLink}>{menuItem.ctaText}</a>
+                )}
               </li>
             )
           )}

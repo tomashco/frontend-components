@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Title = styled.div`
+  margin: 1em 0;
   h1 {
     font-size: 2vw;
   }

@@ -4,8 +4,16 @@ import portfolioImg from "./img/portfolio.png";
 export const mockPersonalProjectsList = [
   {
     title: "Personal Portfolio",
-    description: "This website has been made ",
-    techStackLabels: ["React", "Bit", "Typescript"],
+    description:
+      "This website has been made using Bit framework in order to develop each component separately. The Component Based Development approach gave me the opportunity to focus on each component separately and indipendently. The most interesting part of this approach is the reusability of code in different projects.",
+    techStackLabels: [
+      "React",
+      "Bit",
+      "Typescript",
+      "Router",
+      "Responsive",
+      "Styled-Components",
+    ],
     src: portfolioImg,
     dateStart: new Date("September 15, 2021"),
     dateEnd: new Date("October 15, 2021"),

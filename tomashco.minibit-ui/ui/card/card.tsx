@@ -24,9 +24,10 @@ const BaseCard = styled.div`
   box-shadow: 0 5px 10px #ccc;
   flex-direction: column;
   justify-content: flex-start;
-
+  background: var(--primary-bg);
   p {
     padding: 1em 1em 0.2em 1em;
+    margin-bottom: 1em;
   }
   img {
     min-height: 15em;

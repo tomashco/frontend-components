@@ -2,6 +2,7 @@ import React from "react";
 
 import PageTitle from "@tomashco/minibit-ui.ui.page-title";
 import SocialButtons from "@tomashco/minibit-ui.ui.social-buttons";
+import { Route } from "react-router-dom";
 import styled from "styled-components";
 
 const PageTitleContainer = styled.div`
@@ -46,6 +47,8 @@ export type PortfolioIntroProps = {
   Linkedin?: string;
   GitHub?: string;
   Mail?: string;
+  path?: string;
+  exact?: boolean;
 };
 
 export default function PortfolioIntro({
@@ -55,16 +58,20 @@ export default function PortfolioIntro({
   Linkedin,
   GitHub,
   Mail,
+  path,
+  exact,
 }: PortfolioIntroProps) {
   return (
-    <PageTitleContainer>
-      <TitleSection>
-        <PageTitle title={title} secondaryTitle={catchyPhrase} />
-        <SocialSection>
-          <SocialButtons Linkedin={Linkedin} GitHub={GitHub} Mail={Mail} />
-        </SocialSection>
-      </TitleSection>
-      {titleImg && <TitleImg src={titleImg} alt={titleImg} />}
-    </PageTitleContainer>
+    <Route exact={exact} path={path}>
+      <PageTitleContainer>
+        <TitleSection>
+          <PageTitle title={title} secondaryTitle={catchyPhrase} />
+          <SocialSection>
+            <SocialButtons Linkedin={Linkedin} GitHub={GitHub} Mail={Mail} />
+          </SocialSection>
+        </TitleSection>
+        {titleImg && <TitleImg src={titleImg} alt={titleImg} />}
+      </PageTitleContainer>
+    </Route>
   );
 }

@@ -4,6 +4,7 @@ import { colors } from "@tomashco/minibit-ui.styles.colors";
 import { typography } from "@tomashco/minibit-ui.styles.typography";
 import PageMenu from "@tomashco/minibit-ui.ui.page-menu";
 import classNames from "classnames";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const Page = styled.div`
@@ -44,10 +45,14 @@ export default function PagesContainer({
   return (
     <div className={classNames(colors, typography)}>
       <Page>
-        <Container boxed>
-          <PageMenu toggleTheme items={menuItems} />
-          <PageContent>{children}</PageContent>
-        </Container>
+        <Router>
+          <Container boxed>
+            <PageMenu toggleTheme items={menuItems} />
+            <PageContent>
+              <Switch>{children}</Switch>
+            </PageContent>
+          </Container>
+        </Router>
       </Page>
     </div>
   );
